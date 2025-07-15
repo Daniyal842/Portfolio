@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app-colors.dart';
+import 'package:portfolio/utills/dimension_size.dart';
+import 'package:portfolio/utills/media_queries.dart';
 
 import '../../core/constants/text_components.dart';
 
@@ -45,39 +47,29 @@ class _DesktopPageTwoState extends State<DesktopPageTwo> {
   ];
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
+
     return Container(
       width: double.infinity,
-      height: height * 1.2,
       color: AppColors.background,
       padding: EdgeInsets.symmetric(
-        horizontal: width * 0.03,
-        vertical: height * 0.04,
+        horizontal: GetMediaQuary.getWidth(context) * 0.04,
+        vertical: GetMediaQuary.getHight(context) * 0.07,
       ),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Heading
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 35),
-              child: TextComponent(
-                text: 'MY SERVICES',
-                fontSize: width * 0.011113, // ~28 on 1200px screen
-                color: AppColors.redAccent,
-              ),
+            TextComponent(
+              text: 'MY SERVICES',
+              color: AppColors.redAccent,
+              fontSize: GetSize.getSmall(context),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 35),
-              child: TextComponent(
-                text: 'What I Do',
-                fontSize: width * 0.03, // ~28 on 1200px screen
-                fontWeight: FontWeight.bold,
-                color: AppColors.white,
-              ),
+            TextComponent(
+              text: 'What I Do',
+              fontWeight: FontWeight.bold,
+              fontSize: GetSize.getSLarge(context),
             ),
 
-            SizedBox(height: height * 0.04), // ~30
+            SizedBox(height: GetMediaQuary.getHight(context) * 0.04), // ~30
 
             // GridView.count(
             //   crossAxisCount: 3, // ✅ same as 3 items in Row
@@ -139,25 +131,25 @@ class _DesktopPageTwoState extends State<DesktopPageTwo> {
               physics: NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3, // ✅ same as 3 items in Row
-                crossAxisSpacing: width * 0.04,
-                mainAxisSpacing: height * 0.04,
-                childAspectRatio: (width * 0.25) / (height * 0.37), // ✅ same as Container size
+                crossAxisSpacing: GetMediaQuary.getWidth(context) * 0.04,
+                mainAxisSpacing: GetMediaQuary.getHight(context) * 0.04,
+                childAspectRatio: (GetMediaQuary.getWidth(context) * 0.25) / (GetMediaQuary.getHight(context) * 0.37), // ✅ same as Container size
               ),
               itemBuilder: (context, index) {
                 final item = whatIDoItems[index];
                 return Container(
-                  width: width * 0.25, // ✅ match Row layout
+                  width: GetMediaQuary.getWidth(context) * 0.25, // ✅ match Row layout
                   // height: height * 0.37, // optional, handled by childAspectRatio
-                  padding: EdgeInsets.all(width * 0.015),
+                  padding: EdgeInsets.all(GetMediaQuary.getWidth(context) * 0.015),
                   decoration: BoxDecoration(
                     color: AppColors.card,
-                    borderRadius: BorderRadius.circular(width * 0.015),
+                    borderRadius: BorderRadius.circular(GetMediaQuary.getWidth(context) * 0.015),
                     border: Border.all(color: AppColors.border),
                     boxShadow: [
                       BoxShadow(
                         color: AppColors.shadow,
-                        blurRadius: width * 0.01,
-                        offset: Offset(0, height * 0.006),
+                        blurRadius: GetMediaQuary.getWidth(context) * 0.01,
+                        offset: Offset(0, GetMediaQuary.getHight(context) * 0.006),
                       ),
                     ],
                   ),
@@ -166,20 +158,18 @@ class _DesktopPageTwoState extends State<DesktopPageTwo> {
                     children: [
                       Icon(
                         item['icon'],
-                        size: width * 0.0333,
+                        size: GetSize.getLarge(context),//width * 0.0333,
                         color: AppColors.iconRed,
                       ),
-                      SizedBox(height: height * 0.02),
+                      SizedBox(height: GetMediaQuary.getHight(context) * 0.02),
                       TextComponent(
                         text: item['title'],
-                        fontSize: width * 0.015,
+                        fontSize: GetSize.getLarge(context),//width * 0.015,
                         fontWeight: FontWeight.w700,
-                        color: AppColors.white,
                       ),
-                      SizedBox(height: height * 0.01),
+                      SizedBox(height: GetMediaQuary.getHight(context) * 0.03),
                       TextComponent(
                         text: item['description'],
-                        fontSize: width * 0.0116,
                         fontWeight: FontWeight.w400,
                         color: AppColors.grey,
                         maxLines: 4,
