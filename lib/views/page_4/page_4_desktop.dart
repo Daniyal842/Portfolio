@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app-colors.dart';
-import 'package:portfolio/core/constants/text_components.dart';
-import 'package:portfolio/utills/dimension_size.dart';
-import 'package:portfolio/utills/media_queries.dart';
+import 'package:portfolio/core/widget/text_components.dart';
+import '../../core/utils/dimension_size.dart';
+import '../../core/utils/media_queries.dart';
 
 class DeskTopPageFour extends StatefulWidget {
   const DeskTopPageFour({super.key});

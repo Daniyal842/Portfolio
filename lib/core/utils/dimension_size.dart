@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:portfolio/utills/media_queries.dart';
+
+import 'media_queries.dart';
 
 class GetSize
 {

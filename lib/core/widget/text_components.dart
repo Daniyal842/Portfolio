@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/utills/dimension_size.dart';
+import 'package:portfolio/core/constants/utills/dimension_size.dart';
+
+import '../utils/dimension_size.dart';
 
 class TextComponent extends StatelessWidget {
   final String text;

@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/assets/icons/icons.dart';
 import 'package:portfolio/core/constants/app-colors.dart';
-import 'package:portfolio/core/constants/text_components.dart';
+import 'package:portfolio/core/widget/text_components.dart';
 import 'package:portfolio/views/page_1/main-page-1.dart';
 import 'package:portfolio/views/page_2/main_page_2.dart';
 import 'package:portfolio/views/page_3/main_page_3.dart';
 import 'package:portfolio/views/page_4/main_page_4.dart';
+import 'package:portfolio/views/page_5/main_page_5.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -170,7 +171,11 @@ int selected=1;
             Divider(
               color: AppColors.background2,
             ),
-            MainPAgeFour()
+            MainPageFour(),
+            Divider(
+              color: AppColors.background2,
+            ),
+            MainPageFive()
           ],
         ),
       ),

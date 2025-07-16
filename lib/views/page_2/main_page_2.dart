@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/responsive-layout.dart';
+import 'package:portfolio/core/widget/responsive-layout.dart';
 import 'package:portfolio/views/page_2/page_2_desktop.dart';
 import 'package:portfolio/views/page_2/page_2_mobile.dart';
 import 'package:portfolio/views/page_2/page_2_tablet.dart';
