@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/assets/picture/image.dart';
 import 'package:portfolio/core/constants/app-colors.dart';
 import 'package:portfolio/core/widget/text_components.dart';
-import '../../core/constants/utills/dimension_size.dart';
-// import '../../core/constants/utills/media_queries.dart';
 import '../../core/utils/dimension_size.dart';
 import '../../core/utils/media_queries.dart';
 
