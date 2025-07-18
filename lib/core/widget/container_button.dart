@@ -12,7 +12,10 @@ class ContainerButton extends StatelessWidget {
   final Color? iconColor;
   final bool showIcon;
   final String? iconPath;
+  final IconData? iconData;
   final double? iconSize;
+  final double? fontSize;
+  final EdgeInsetsGeometry? padding;
 
   const ContainerButton({
     super.key,
@@ -23,7 +26,10 @@ class ContainerButton extends StatelessWidget {
     this.iconColor,
     this.showIcon = false,
     this.iconPath,
+    this.iconData,
     this.iconSize,
+    this.fontSize,
+    this.padding
   });
 
   @override
@@ -38,7 +44,7 @@ class ContainerButton extends StatelessWidget {
           horizontal: width * 0.03,
           vertical: height * 0.02,
         ),
-        padding: EdgeInsets.symmetric(
+        padding: padding?? EdgeInsets.symmetric(
           horizontal: width * 0.03,
           vertical: height * 0.015,
         ),
@@ -60,16 +66,25 @@ class ContainerButton extends StatelessWidget {
             TextComponent(
               text: text,
               color: textColor,
+              fontSize: fontSize,
               fontWeight: FontWeight.w500,
             ),
-            if (showIcon && iconPath != null) ...[
+            if (showIcon) ...[
               SizedBox(width: width * 0.015),
-              Image.asset(
-                iconPath!,
-                height: iconSize ?? GetSize.getMediam(context) * 1.2,
-                color: iconColor,
-              ),
+              if (iconPath != null)
+                Image.asset(
+                  iconPath!,
+                  height: iconSize ?? GetSize.getMediam(context) * 1.2,
+                  color: iconColor,
+                )
+              else if (iconData != null)
+                Icon(
+                  iconData,
+                  size: iconSize ?? GetSize.getMediam(context) * 1.2,
+                  color: iconColor,
+                ),
             ],
+
           ],
         ),
       ),

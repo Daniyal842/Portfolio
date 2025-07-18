@@ -8,6 +8,7 @@ class CardContainer extends StatelessWidget {
   final double? height;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margen;
+  final double? borderRadius;
 
   const CardContainer({
     super.key,
@@ -16,6 +17,7 @@ class CardContainer extends StatelessWidget {
     this.height,
     this.padding,
     this.margen,
+    this.borderRadius
   });
 
   @override
@@ -30,7 +32,9 @@ class CardContainer extends StatelessWidget {
        margin: margen,
       decoration: BoxDecoration(
         color: AppColors.card,
-        borderRadius: BorderRadius.circular(screenWidth * 0.015),
+        borderRadius: BorderRadius.circular(
+          borderRadius ?? screenWidth * 0.015, // ✅ Apply custom radius
+        ),
         border: Border.all(color: AppColors.border),
         boxShadow: [
           BoxShadow(

@@ -6,16 +6,38 @@ import 'media_queries.dart';
 
 class GetSize
 {
-  static getSmall(BuildContext context){
-    return GetMediaQuary.getHight(context)* 0.02;
+  static double getSmall(BuildContext context) {
+    return GetMediaQuary.getWidth(context) * 0.015;
   }
-  static getMediam(BuildContext context){
-    return GetMediaQuary.getHight(context)*0.03;
+
+  static double getMediam(BuildContext context) {
+    return GetMediaQuary.getWidth(context) * 0.018;
   }
-  static getLarge(BuildContext context){
-    return GetMediaQuary.getHight(context)*0.04;
+
+  static double getLarge(BuildContext context) {
+    return GetMediaQuary.getWidth(context) * 0.022;
   }
-  static getSLarge(BuildContext context){
-    return GetMediaQuary.getHight(context)*0.05;
+
+  static double getSLarge(BuildContext context) {
+    return GetMediaQuary.getWidth(context) * 0.026;
+  }
+}
+
+class GetSize2
+{
+  static double getSmall(BuildContext context) {
+    return GetMediaQuary.getHight(context) * 0.015;
+  }
+
+  static double getMediam(BuildContext context) {
+    return GetMediaQuary.getHight(context) * 0.018;
+  }
+
+  static double getLarge(BuildContext context) {
+    return GetMediaQuary.getHight(context) * 0.022;
+  }
+
+  static double getSLarge(BuildContext context) {
+    return GetMediaQuary.getHight(context) * 0.026;
   }
 }
