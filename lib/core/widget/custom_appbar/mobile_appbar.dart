@@ -51,26 +51,6 @@ class MobileAppBar extends StatelessWidget {
                   ),
                 ],
               ),
-              // InkWell(
-              //   onTap: () {
-              //     // Add your CV download logic here
-              //   },
-              //   borderRadius: BorderRadius.circular(20),
-              //   child: Container(
-              //     padding:
-              //     const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              //     decoration: BoxDecoration(
-              //       color: AppColors.redAccent,
-              //       borderRadius: BorderRadius.circular(20),
-              //     ),
-              //     child: TextComponent(
-              //       text: "DOWNLOAD CV",
-              //       fontSize: width * 0.035,
-              //       fontWeight: FontWeight.w500,
-              //       color: Colors.white,
-              //     ),
-              //   ),
-              // ),
               ContainerButton(
                   onTap: (){},
                   text: "DOWNLOAD CV",
@@ -90,35 +70,35 @@ class MobileAppBar extends StatelessWidget {
             children: [
               NavTextButton(
                 text: "HOME",
-                bfontSize: selected==1? GetSize2.getSmall(context):GetSize.getMediam(context),
+                bfontSize: selected==1? GetSize.getSmall(context):GetSize.getMediam(context),
                 selectedIndex: selected,
                 currentIndex: 1,
                 onTap: () => onSelect(1),
               ),
               NavTextButton(
                 text: "SERVICES",
-                bfontSize: selected==2? GetSize2.getSmall(context):GetSize.getMediam(context),
+                bfontSize: selected==2? GetSize.getSmall(context):GetSize.getMediam(context),
                 selectedIndex: selected,
                 currentIndex: 2,
                 onTap: () => onSelect(2),
               ),
               NavTextButton(
                 text: "PORTFOLIO",
-                bfontSize: selected==3? GetSize2.getSmall(context):GetSize.getMediam(context),
+                bfontSize: selected==3? GetSize.getSmall(context):GetSize.getMediam(context),
                 selectedIndex: selected,
                 currentIndex: 3,
                 onTap: () => onSelect(3),
               ),
               NavTextButton(
                 text: "RESUME",
-                bfontSize: selected==4? GetSize2.getSmall(context):GetSize.getMediam(context),
+                bfontSize: selected==4? GetSize.getSmall(context):GetSize.getMediam(context),
                 selectedIndex: selected,
                 currentIndex: 4,
                 onTap: () => onSelect(4),
               ),
               NavTextButton(
                 text: "CONTACT",
-                bfontSize: selected==5? GetSize2.getSmall(context):GetSize.getMediam(context),
+                bfontSize: selected==5? GetSize.getSmall(context):GetSize.getMediam(context),
                 selectedIndex: selected,
                 currentIndex: 5,
                 onTap: () => onSelect(5),

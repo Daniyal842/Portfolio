@@ -16,6 +16,9 @@ class ContainerButton extends StatelessWidget {
   final double? iconSize;
   final double? fontSize;
   final EdgeInsetsGeometry? padding;
+  final double? borderRadius;
+  final EdgeInsetsGeometry? margin;
+
 
   const ContainerButton({
     super.key,
@@ -29,7 +32,9 @@ class ContainerButton extends StatelessWidget {
     this.iconData,
     this.iconSize,
     this.fontSize,
-    this.padding
+    this.padding,
+    this.borderRadius,
+    this.margin
   });
 
   @override
@@ -40,7 +45,7 @@ class ContainerButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.symmetric(
+        margin: margin?? EdgeInsets.symmetric(
           horizontal: width * 0.03,
           vertical: height * 0.02,
         ),
@@ -50,7 +55,7 @@ class ContainerButton extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: bgColor,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(borderRadius?? GetMediaQuary.getWidth(context)*0.015),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),

@@ -101,7 +101,7 @@ class _MobilePageTwoState extends State<MobilePageTwo> {
                           fontSize: GetSize.getLarge(context)*2,
                           fontWeight: FontWeight.w700,
                         ),
-                        SizedBox(height: GetMediaQuary.getHight(context) * 0.04),
+                        SizedBox(height: GetMediaQuary.getHight(context) * 0.03),
                         TextComponent(
                           text: item['description'],
                           fontWeight: FontWeight.w400,
@@ -112,46 +112,6 @@ class _MobilePageTwoState extends State<MobilePageTwo> {
                       ],
                     ),
                 );
-                // return Container(
-                //   width: GetMediaQuary.getWidth(context) * 0.65,
-                //   padding: EdgeInsets.all(GetMediaQuary.getWidth(context) * 0.035),
-                //   decoration: BoxDecoration(
-                //     color: AppColors.card,
-                //     borderRadius: BorderRadius.circular(GetMediaQuary.getWidth(context) * 0.03),
-                //     border: Border.all(color: AppColors.border),
-                //     boxShadow: [
-                //       BoxShadow(
-                //         color: AppColors.shadow,
-                //         blurRadius: GetMediaQuary.getWidth(context) * 0.01,
-                //         offset: Offset(0, GetMediaQuary.getHight(context) * 0.006),
-                //       ),
-                //     ],
-                //   ),
-                //   child: Column(
-                //     crossAxisAlignment: CrossAxisAlignment.start,
-                //     children: [
-                //       Icon(
-                //         item['icon'],
-                //         size: GetSize.getSLarge(context)*4,
-                //         color: AppColors.iconRed,
-                //       ),
-                //       SizedBox(height: GetMediaQuary.getHight(context) * 0.03),
-                //       TextComponent(
-                //         text: item['title'],
-                //         fontSize: GetSize.getLarge(context)*2,
-                //         fontWeight: FontWeight.w700,
-                //       ),
-                //       SizedBox(height: GetMediaQuary.getHight(context) * 0.04),
-                //       TextComponent(
-                //         text: item['description'],
-                //         fontWeight: FontWeight.w400,
-                //         fontSize: GetSize.getSLarge(context)*1.5,
-                //         color: AppColors.grey,
-                //         maxLines: 10,
-                //       ),
-                //     ],
-                //   ),
-                // );
               },
             ),
           ),

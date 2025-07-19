@@ -21,9 +21,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     double width = GetMediaQuary.getWidth(context);
 
-    if (width >= 1100) {
+    if (width >= 1024) {
       return DesktopAppBar(selected: selected, onSelect: onSelect);
-    } else if (width >= 500) {
+    } else if (width >= 600) {
       return TabletAppBar(selected: selected, onSelect: onSelect);
     } else {
       return MobileAppBar(selected: selected, onSelect: onSelect);

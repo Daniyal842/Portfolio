@@ -15,10 +15,10 @@ class ResponsiveLayoutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 500) {
+        if (constraints.maxWidth < 600) {
           print("Loading: Mobile layout");
           return mobile;
-        } else if (constraints.maxWidth < 1100) {
+        } else if (constraints.maxWidth < 1024) {
           print("Loading: Tablet layout");
           return tablet;
         } else {

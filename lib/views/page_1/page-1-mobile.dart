@@ -26,23 +26,23 @@ class MobilePageOne extends StatelessWidget {
             children: [
               TextComponent(
                 text: "Hello,",
-                fontSize: GetSize2.getMediam(context),
+                fontSize: GetSize.getMediam(context),
               ),
               TextComponent(
                 text: "I'm",
                 color: AppColors.redAccent,
-                fontSize: GetSize2.getMediam(context),
+                fontSize: GetSize.getMediam(context),
               ),
             ],
           ),
           TextComponent(
             text: "Muhammad Daniyal",
             // fontWeight: FontWeight.bold,
-            fontSize: GetSize2.getSLarge(context),
+            fontSize: GetSize.getSLarge(context),
           ),
           TextComponent(
             text: "Flutter Developer and Web/App Interface Designer.",
-            fontSize: GetSize2.getLarge(context),
+            fontSize: GetSize.getLarge(context),
           ),
           TextComponent(
             text: "I’m a passionate Flutter developer who enjoys building \n"
@@ -53,7 +53,7 @@ class MobilePageOne extends StatelessWidget {
                 "intuitive designs.\n"
                 "Let’s build something amazing together!",
             color: AppColors.grey,
-            fontSize: GetSize2.getSmall(context),
+            fontSize: GetSize.getSmall(context),
           ),
           Stack(
             alignment: Alignment.bottomCenter,
