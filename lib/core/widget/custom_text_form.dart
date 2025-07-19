@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app-colors.dart';
 
+import '../utils/media_queries.dart';
+
 class CustomTextForm extends StatelessWidget {
   final String hintText;
   final int maxLines;
@@ -27,17 +29,21 @@ class CustomTextForm extends StatelessWidget {
         hintStyle: const TextStyle(color: Colors.grey),
         filled: true,
         fillColor: AppColors.background2,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: GetMediaQuary.getWidth(context) * 0.02,
+          vertical: GetMediaQuary.getHight(context) * 0.02,
+        ),
+
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(GetMediaQuary.getHight(context) * 0.015),
           borderSide: const BorderSide(color: AppColors.border),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(GetMediaQuary.getHight(context) * 0.015),
           borderSide: const BorderSide(color: AppColors.border),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(GetMediaQuary.getHight(context) * 0.015),
           borderSide: const BorderSide(color: AppColors.redAccent),
         ),
       ),

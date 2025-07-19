@@ -53,7 +53,7 @@ class _MobilePageTwoState extends State<MobilePageTwo> {
       color: AppColors.background,
       padding: EdgeInsets.symmetric(
         horizontal: GetMediaQuary.getWidth(context) * 0.04,
-        vertical: GetMediaQuary.getHight(context) * 0.07,
+        vertical: GetMediaQuary.getHight(context) * 0.02,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

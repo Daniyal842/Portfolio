@@ -26,7 +26,8 @@ class MobileAppBar extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: AppColors.background,
-      height: 10,
+      height: MediaQuery.of(context).size.height * 0.15, // ≈ 15% screen height (~100-120 px)
+
       //padding: EdgeInsets.symmetric(vertical: 22, horizontal: 16),
       // margin: EdgeInsets.symmetric(vertical: 10, horizontal: 1),
       child: Column(

@@ -112,48 +112,84 @@ int selected=1;
       //   ],
       // ),
       backgroundColor: AppColors.background,
-      body: Column(
+      resizeToAvoidBottomInset: true,
+      body:  Column(
         children: [
-          Expanded(
-            flex: 15,
-            child:  CustomAppBar(
-              selected: selected,
-              onSelect: (index) {
-                setState(() {
-                  selected = index;
-                });
-              },
-            ),
+          /// Fixed Custom AppBar
+          CustomAppBar(
+            selected: selected,
+            onSelect: (index) {
+              setState(() => selected = index);
+            },
           ),
+
+          /// Expanded scrollable content
           Expanded(
-            flex: 80,
-            child: SingleChildScrollView(
-              //padding: EdgeInsets.only(top: 100), // 👈 space for fixed navbar
-              child: Column(
-                children: [
-                  MainPageOne(),
-                  Divider(
-                    color: AppColors.background2,
-                  ),
-                  MainPageTwo(),
-                  Divider(
-                    color: AppColors.background2,
-                  ),
-                  MainPageThree(),
-                  Divider(
-                    color: AppColors.background2,
-                  ),
-                  MainPageFour(),
-                  Divider(
-                    color: AppColors.background2,
-                  ),
-                  MainPageFive()
-                ],
+            child: ListView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
+              children: [
+                MainPageOne(),
+                Divider(color: AppColors.background2),
+                MainPageTwo(),
+                Divider(color: AppColors.background2),
+                MainPageThree(),
+                Divider(color: AppColors.background2),
+                MainPageFour(),
+                Divider(color: AppColors.background2),
+                MainPageFive(),
+              ],
             ),
           ),
         ],
       ),
+
+    // body: Column(
+      //   children: [
+      //     Expanded(
+      //       flex: 15,
+      //       child:  CustomAppBar(
+      //         selected: selected,
+      //         onSelect: (index) {
+      //           setState(() {
+      //             selected = index;
+      //           });
+      //         },
+      //       ),
+      //     ),
+      //     Expanded(
+      //       flex: 80,
+      //       child: SingleChildScrollView(
+      //         //padding: EdgeInsets.only(top: 100), // 👈 space for fixed navbar
+      //         padding: EdgeInsets.only(
+      //           bottom: MediaQuery.of(context).viewInsets.bottom,
+      //         ),
+      //         child: Column(
+      //           children: [
+      //             MainPageOne(),
+      //             Divider(
+      //               color: AppColors.background2,
+      //             ),
+      //             MainPageTwo(),
+      //             Divider(
+      //               color: AppColors.background2,
+      //             ),
+      //             MainPageThree(),
+      //             Divider(
+      //               color: AppColors.background2,
+      //             ),
+      //             MainPageFour(),
+      //             Divider(
+      //               color: AppColors.background2,
+      //             ),
+      //             MainPageFive()
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

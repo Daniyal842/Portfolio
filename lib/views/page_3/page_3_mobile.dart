@@ -44,7 +44,7 @@ class _MobilePageThreeState extends State<MobilePageThree> {
       color: AppColors.background,
       padding: EdgeInsets.symmetric(
         horizontal: GetMediaQuary.getWidth(context) * 0.04,
-        vertical: GetMediaQuary.getHight(context) * 0.06,
+        vertical: GetMediaQuary.getHight(context) * 0.02,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,7 +59,7 @@ class _MobilePageThreeState extends State<MobilePageThree> {
             fontWeight: FontWeight.bold,
             fontSize: GetSize.getSLarge(context) * 3,
           ),
-          SizedBox(height: GetMediaQuary.getHight(context) * 0.04),
+         // SizedBox(height: GetMediaQuary.getHight(context) * 0.01),
           GridView.builder(
             itemCount: recentWork.length,
             shrinkWrap: true,
